@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Resume Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+    <div class="background-image"></div>
+    
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <p>Tanaka Chirokoto</p>
+            </a>
+            <button class="hamburger" onclick="toggleNavbar()">☰</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <script>
+        function toggleNavbar() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section id="home" class="section">
+        <div class="intro">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your one-stop destination for innovative designs and solutions.</p>
+        </div>
+    </section>
+    <div class="header-text">
+        <p>Web and UI/UX Designer</p>
+        <h1><span class="a">Hi</span> l'm <span class="b">Tanaka </span> <br>
+            From <span class="c">Zimbabwe</span></h1>
+            
+    </div>
+
+    <section id="about" class="section">
+        <div class="animation">
+            <h1>
+                I'M A 
+                <span class="words" >
+                    <span style="color: rgb(235, 19, 12);">CODER</span>
+                    <span style="color: rgb(228, 224, 25);">DEVELOPER</span>
+                    <span style="color: rgb(28, 148, 218);">DESIGNER</span>
+                    <span style="color: rgb(26, 221, 8);">FREELANCER</span>
+                    <span style="color: rgb(235, 19, 12);">PROGRAMMER</span>
+                </span>
+            </h1>
+        </div>
+        
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/1.jpg" alt="Your Picture">
+            </div>
+            
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    I am Tanaka, a passionate web designer and developer with experience in creating responsive and user-friendly websites. 
+                    I specialize in front-end development, UI/UX design, and app design. My goal is to create impactful digital experiences.
+                </p>
+            </div>
+        </div> 
+            <div class="tabs">
+                <button class="tab" data-target="skills">Skills</button>
+                <button class="tab" data-target="experience">Experience</button>
+                <button class="tab" data-target="education">Education</button>
+            </div>
+            <div class="tab-content active" id="skills"> <h3>Skills content </h3>  <p>Combining creativity, <br>
+                technical expertise, and a user-focused approach <br>
+                 to deliver exceptional UI/UX, app design, web design, <br>
+                  and immersive digital experiences.</p></div>
+            <div class="tab-content" id="experience"> <h3>Experience content </h3><p>Led the design of a seamless <br>
+                 and visually engaging online ordering experience for Foodora,<br>
+                  enhancing user satisfaction and conversion rates. <br>
+                   Additionally, crafted an immersive digital <br>
+                    presence for a lodge resort,<br>
+                     capturing its serene charm and elevating its <br>
+                online bookings through intuitive design  </p></div>
+            <div class="tab-content" id="education"> <h3>Education content</h3>
+                 <p> Bachelor of Software engineering <br>
+                Zou University , Harare, Zimbabwe <br>
+                 <br>
+                
+                Specialized in web development,<br>
+                 . <br>
+                Completed projects focused on  <br>
+                real-world applications of <br>
+                 design principles.
+                
+        </div>
+    </section>
+    
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabContents.forEach(content => content.classList.remove('active'));
+                tabs.forEach(btn => btn.classList.remove('active'));
+                tab.classList.add('active');
+                const target = tab.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+    
+    
+
+    <section id="services" class="section">
+        <h2 style="font-size: 36px;
+        font-weight: bold;
+        background: linear-gradient(to right, #e62786, #F7DC6F, #85dd21, #03A9F4, #FFC107);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">My Services</h2> <br>
+        <div class="services">
+            <div class="service-card" data-title="Web Design">
+                <i class="fa-solid fa-code" style="
+                font-size: 50px;
+                margin-bottom: 30px;"></i>
+                <h3>Web Design</h3>
+                <p>Creating visually stunning and user-friendly websites that leave a lasting impression.</p>
+                     <a href="#" style="color: blueviolet;">Learn more</a>
+            </div>
+            <div class="service-card" data-title="UI/UX Design">
+                <i class="fa-solid fa-crop" style="
+                font-size: 50px;
+                margin-bottom: 30px;"></i>
+                <h3>UI/UX Design</h3>
+                <p>Crafting intuitive experiences that delight and inspire users.</p>
+                    <a href="#" style="color: blueviolet;">Learn more</a>
+            </div>
+            <div class="service-card" data-title="App Design">
+                <i class="fa-brands fa-app-store" style="
+                font-size: 50px;
+                margin-bottom: 30px;"></i>
+                <h3>App Design</h3>
+                <p>Designing seamless and engaging app experiences for modern users</p>
+                
+                
+                    <a href="#" style="color: blueviolet;">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+   <section id="portfolio" class="section">
+        <h1 style="font-size: 36px;
+        font-weight: bold;
+        background: linear-gradient(to right, #e62786, #F7DC6F, #85dd21, #03A9F4, #FFC107);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">My Work</h1> <br>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">
+                <img src="images/hero1.jpg" alt="Work 1">
+                <div class="layer">
+                    <h3> Fast Food site <br> Foodora</h3>
+                    <p> <strong>The app site connects you to the delicious <br> food around the world. 
+                        Click to view the site.</strong>
+                    </p>
+                    <a href="https://teekay00-ash.github.io/Foodo/"><i class="fas fa-external-link-alt" style="color: black;"></i></a>
+                </div>
+                <div class="hover-effect">Project Foodora</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/hero2.jpg" alt="Work 2">
+                <div class="layer">
+                    <h3> Lodge Resort <br> site App</h3>
+                    <p> <strong>Designing serene and <br>immersive online experiences that <br>
+                         reflect the beauty and <br>tranquility of your lodge resort. <br> 
+                         Click to view the site.</strong>
+                    </p>
+                    <a href="https://teekay00-ash.github.io/tekay_lodge/"><i class="fas fa-external-link-alt" style="color: black;"></i></a>
+                </div>
+                <div class="hover-effect">Project Resort</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/w3.png" alt="Work 3">
+                <div class="layer">
+                    <h3> Music App</h3>
+                    <p>The app connects you to the talented <br> people around the world. 
+                         <br>
+                       <strong> still in progress....</strong>
+                    </p>
+                    <a href="#"><i class="fas fa-external-link-alt" style="color: black;"></i></a>
+                </div>
+                <div class="hover-effect">Project Music</div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button class="see-more" style="background-color: black;font-size: 15px;">See More</button>
+    </section>
+    <!--
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/7.jpg" alt="Work 3">
+                <div class="layer">
+                    <h3> Music App</h3>
+                    <p>The app connects you to the talented people around the world. 
+                        Download from playstore
+                    </p>
+                    <a href="#"><i class="fas fa-external-link-alt" alt></i></a>
+                </div>
+                <div class="work">
+                    <img src="images/7.jpg" alt="Work 3">
+                <div class="layer">
+                    <h3> Music App</h3>
+                    <p>The app connects you to the talented people around the world. 
+                        Download from playstore
+                    </p>
+                    <a href="#"><i class="fas fa-external-link-alt" alt></i></a>
+                </div>
+                <div class="work">
+                    <img src="images/.jpg" alt="Work 3">
+                <div class="layer">
+                    <h3> Music App</h3>
+                    <p>The app connects you to the talented people around the world. 
+                        Download from playstore
+                    </p>
+                    <a href="#"><i class="fas fa-external-link-alt" alt></i></a>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+
+    <section id="contact" class="section">
+        <h2 style="font-size: 36px;
+        font-weight: bold;
+        background: linear-gradient(to right, #4d0202, #050e8d, #9090e6, #222cb4, #FFC107);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">Contact Me</h2> <br>
+        <div class="contact-container">
+             <form class="contact-form" action="send_email.php" method="POST">
+
+                <input type="text" name="Name" placeholder="Your Name">
+                <input type="email" name="Email" placeholder="Your Email">
+                <textarea name="Message" placeholder="Your Message"></textarea>
+                <a href="mailto:chirokototanaka811@gmail.com" class="email-button">
+                    <i class="fas fa-envelope"></i> Send Email
+                </a>
+            </form>
+            <div class="contact-info">
+                <p <i class="fas fa-paper-plane"></i> Email: chirokototanaka811@gmail.com</p>
+                <p <1 class="fas fa-phone-square-alt"></1> Contact:+263778891251</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Tanaka chirokoto" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/Tanaka chirokoto" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="chirokototanaka811@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                
+              
+                <a href="images/mycv.pdf" download class="download-btn">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="copy">
+        <p>&copy; 2025 Tanaka Teekay. <i class="fas fa-heart"> </i>All rights reserved.</p>
+    </footer>
+</body>
+</html>
